@@ -1,0 +1,245 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f3f5fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app {
+  width: min(900px, 92%);
+  margin: 40px auto;
+}
+
+.hero {
+  padding: 32px;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(125deg, #4338ca, #7c3aed, #a855f7);
+  box-shadow: 0 12px 30px #6d28d926;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #e9d5ff;
+}
+
+.hero h1 {
+  margin: 12px 0;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.hero p {
+  margin-bottom: 0;
+  color: #f3e8ff;
+  line-height: 1.7;
+}
+
+.panel {
+  margin-top: 24px;
+  padding: 26px;
+  border: 1px solid #e5e7ef;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 25px #17203308;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 21px;
+}
+
+.section-heading p,
+.product-info p {
+  margin: 0;
+  color: #7b8498;
+  font-size: 13px;
+}
+
+.count,
+.edit-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-weight: 800;
+}
+
+.product-list {
+  display: grid;
+  gap: 12px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid #e8eaf2;
+  border-radius: 15px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+  border-color: #a78bfa;
+  transform: translateY(-2px);
+}
+
+.product-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  background: #f3f0ff;
+  font-size: 23px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-info h3 {
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+
+.product-price {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.edit-button,
+.update-button {
+  border: 0;
+  border-radius: 10px;
+  background: #6d4aff;
+  color: white;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.edit-button {
+  padding: 10px 17px;
+}
+
+.edit-button:hover,
+.update-button:hover:not(:disabled) {
+  background: #5032d4;
+}
+
+.form-panel form {
+  display: grid;
+  gap: 11px;
+}
+
+.form-panel label {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-panel input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dce0eb;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+}
+
+.form-panel input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px #7c3aed18;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.update-button,
+.cancel-button {
+  padding: 13px 18px;
+}
+
+.cancel-button {
+  border: 1px solid #dce0eb;
+  border-radius: 10px;
+  background: white;
+  color: #374151;
+  font-weight: 700;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  color: #858da0;
+  font-size: 12px;
+}
+
+@media (max-width: 560px) {
+  .app {
+    margin: 20px auto;
+  }
+
+  .hero,
+  .panel {
+    padding: 20px;
+  }
+
+  .product-card {
+    flex-wrap: wrap;
+  }
+
+  .product-info {
+    flex-basis: calc(100% - 70px);
+  }
+
+  .product-price {
+    margin-left: 4px;
+  }
+
+  .edit-button {
+    margin-left: auto;
+  }
+}
